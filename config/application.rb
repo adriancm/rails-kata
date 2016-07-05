@@ -26,7 +26,7 @@ module Twitter
     config.generators do |g|
   	  g.orm             :active_record
   	  g.template_engine :slim
-  	  g.test_framework  :test_unit, fixture: false
+  	  g.test_framework  :rspec, fixture: true
   	  g.stylesheets     true
       g.javascripts     true
     end
