@@ -4,9 +4,6 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-# Ignore bundler config.
-/.bundle
-
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
@@ -20,9 +17,6 @@
 capybara-*.html
 .rspec
 /log
-/tmp
-/db/*.sqlite3
-/db/*.sqlite3-journal
 /public/system
 /coverage/
 /spec/tmp
@@ -37,6 +31,8 @@ config/initializers/secret_token.rb
 # dotenv
 # TODO Comment out this rule if environment variables can be committed
 .env
+.env.*
+!.env.example
 
 ## Environment normalization:
 /.bundle
@@ -60,5 +56,3 @@ bower.json
 .byebug_history
 .idea
 
-.env.*
-!.env.example
