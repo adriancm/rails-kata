@@ -4,9 +4,21 @@ h2
 = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
   = devise_error_messages!
   .field
+    = f.label :name
+    br
+    = f.text_field :name, autofocus: true
+    .field
+      = f.label :lastname
+      br
+      = f.text_field :lastname
+    .field
+      = f.label :username
+      br
+      = f.text_field :username
+  .field
     = f.label :email
     br
-    = f.email_field :email, autofocus: true
+    = f.email_field :email
   - if devise_mapping.confirmable? && resource.pending_reconfirmation?
     div
       | Currently waiting confirmation for: 
