@@ -21,5 +21,7 @@ Content
 * Mysql
 * User model generation
 * Devise authentication
+* Landing page without auth, header and footer layouts
+* Bootstrap 3
 
 NOTE: I'm not a native English speaker, then forgive my mistakes. 
