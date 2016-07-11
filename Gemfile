@@ -35,6 +35,12 @@ gem 'dotenv-rails'
 # Authentication
 gem 'devise'
 
+### API
+# Active model serializer
+gem 'active_model_serializers', '~> 0.10.0'
+# Doorkeeper oauth authentication
+gem 'doorkeeper', '~> 4.0.0'
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
