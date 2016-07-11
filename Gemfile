@@ -24,8 +24,12 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Slim template engine
 gem 'slim-rails'
+# Bootstrap
+gem 'bootstrap3-rails'
 
+# Dotenv loads environments vars from .env file
 gem 'dotenv-rails'
 
 # Authentication
