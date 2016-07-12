@@ -13,6 +13,21 @@ Rails.application.routes.draw do
   #root 'home#index'
   root 'landing#index'
 
+
+  # API ROUTES
+  namespace :api do
+
+    namespace :v1 do
+      resources :users, only:[:index] do
+        collection do
+          get 'me'
+        end
+      end
+
+    end
+
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
