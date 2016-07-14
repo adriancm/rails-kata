@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -7,7 +8,9 @@ Rails.application.routes.draw do
   use_doorkeeper
 
   # Web Auth
-  devise_for :users
+  devise_for :users, controllers: { sessions: "users/sessions", registrations: "users/registrations" }
+
+  # WEB ROUTES
 
   # You can have the root of your site routed with "root"
   #root 'home#index'
