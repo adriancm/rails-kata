@@ -7,7 +7,7 @@ module Api
 
       helper_method :current_user
 
-      rescue_from Exception, :with => :error_during_processing
+      rescue_from Exception, :with => :internal_server_error
       rescue_from ActiveRecord::RecordNotFound, :with => :not_found
 
       def not_found
@@ -21,6 +21,8 @@ module Api
       def current_user
         @current_user ||= User.find(doorkeeper_token.resource_owner_id) if doorkeeper_token
       end
+
+      class NotAuthorized < Exception; end
 
     end
   end

@@ -1,6 +1,8 @@
 - if user_signed_in?
   = link_to "Sign out", destroy_session_path(current_user), method: :delete
   br
+  = link_to "Edit profile", edit_user_registration_path(current_user)
+  br
 - else
   = link_to "Log in", new_session_path(User.new)
   br

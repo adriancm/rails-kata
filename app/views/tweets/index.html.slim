@@ -1,0 +1,28 @@
+h1 Listing tweets
+
+table
+  thead
+    tr
+      th User
+      th Message
+      th Created at
+      th Updated at
+      th
+      th
+      th
+
+  tbody
+    - @tweets.each do |tweet|
+      tr
+        td = tweet.user
+        td = tweet.message
+        td = tweet.created_at
+        td = tweet.updated_at
+        td = link_to 'Show', tweet
+        - if tweet.user == current_user
+          td = link_to 'Edit', edit_tweet_path(tweet)
+        td = link_to 'Destroy', tweet, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Tweet', new_tweet_path

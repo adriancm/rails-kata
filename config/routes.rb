@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   #root 'home#index'
   root 'landing#index'
 
+  resources :tweets
 
   # API ROUTES
   namespace :api do
@@ -26,6 +27,8 @@ Rails.application.routes.draw do
           get 'me'
         end
       end
+
+      resources :tweets, except: [:edit, :new ]
 
     end
 
